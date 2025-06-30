@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>Irfan Syafie - Creative Portfolio</title>
+    <meta
+      name="description"
+      content="The professional portfolio of Irfan Syafie, a Computer Science student and aspiring software developer, showcasing projects, skills, and experience."
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Ubuntu:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <nav id="navbar">
+      <div class="nav-container">
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+        </ul>
+        <button class="menu-toggle">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </nav>
+    <header id="about">
+      <div class="header-content">
+        <div class="profile-img-container">
+          <img
+            src="images/profile.jpg"
+            alt="Irfan Syafie profile picture"
+            class="profile-img"
+          />
+          <div class="profile-overlay"></div>
+        </div>
+        <h1>Irfan Syafie Nor Afian</h1>
+        <p class="subtitle">
+          Computer Science Student | Future Software Developer
+        </p>
+        <div class="contact-info">
+          <p><i class="fas fa-map-marker-alt"></i> Kuantan, Pahang</p>
+          <p><i class="fas fa-envelope"></i> irfansyafie96@gmail.com</p>
+          <p><i class="fas fa-phone"></i> +601112850115</p>
+        </div>
+        <div class="social-links">
+          <a
+            href="https://www.linkedin.com/in/irfan-syafie-427b92281/"
+            class="social-icon"
+            aria-label="LinkedIn Profile"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><i class="fab fa-linkedin"></i
+          ></a>
+          <a
+            href="https://github.com/irfansyafie96"
+            class="social-icon"
+            aria-label="GitHub Profile"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><i class="fab fa-github"></i
+          ></a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section id="education" class="section">
+        <h2><i class="fas fa-graduation-cap"></i> Education</h2>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-content">
+              <h3>Universiti Teknikal Malaysia Melaka</h3>
+              <p class="degree">
+                Bachelor's in Computer Science (Software Development) with
+                Honours
+              </p>
+              <p class="duration">Expected Graduation: 2026</p>
+              <ul class="achievements">
+                <li>Dean's List [Semester 2, 22/23]</li>
+                <li>Dean's List [Semester 1, 23/24]</li>
+                <li>Dean's List [Semester 2, 23/24]</li>
+                <li>Dean's List [Semester 1, 24/25]</li>
+              </ul>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-content">
+              <h3>Kolej Matrikulasi Pahang</h3>
+              <p class="degree">Science (Physical Sciences)</p>
+              <p class="duration">CGPA: 3.83</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="experience" class="section">
+        <h2><i class="fas fa-briefcase"></i> Work Experience</h2>
+        <div class="experience-container">
+          <div class="experience-card">
+            <h3>The Angry Beans Coffee</h3>
+            <p class="position">Barista & Kitchen Assistant</p>
+            <p class="duration">August 2024 – October 2024</p>
+            <ul class="responsibilities">
+              <li>
+                Prepared and served coffee beverages with high-quality service
+              </li>
+              <li>Cooked light meals following hygiene standards</li>
+              <li>Managed inventory and restocked supplies</li>
+            </ul>
+          </div>
+          <div class="experience-card">
+            <h3>Ah Lee & Rakan-Rakan</h3>
+            <p class="position">Waiter & Cook</p>
+            <p class="duration">July 2023 – October 2023</p>
+            <ul class="responsibilities">
+              <li>Handled customer complaints diplomatically</li>
+              <li>Assisted in training new waitstaff</li>
+              <li>Ensured food safety compliance</li>
+            </ul>
+          </div>
+          <div class="experience-card">
+            <h3>Kuantan Pickers</h3>
+            <p class="position">Waiter</p>
+            <p class="duration">May 2022 – October 2022</p>
+            <ul class="responsibilities">
+              <li>Kept server areas clean and stocked</li>
+              <li>Managed high volume of customers during peak hours</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="section">
+        <h2><i class="fas fa-project-diagram"></i> Past Projects</h2>
+        <div class="projects-container">
+          <!-- Project Item 1 -->
+          <div class="project-item">
+            <h3>AI-Powered Tutoring System</h3>
+            <p class="project-description">
+              Full-stack quiz generator with AI-powered features. Users can
+              upload notes, generate quizzes from content, and review their
+              performance.
+            </p>
+            <p class="project-technologies">
+              Technologies used: React, Node.js + Express and PostgreSQL
+            </p>
+            <div class="project-links">
+              <button
+                class="project-link view-details-btn"
+                data-project-id="ai-tutor"
+              >
+                <i class="fas fa-info-circle"></i> View Details
+              </button>
+              <!--
+              <a href="#" class="project-link" target="_blank"
+                ><i class="fas fa-external-link-alt"></i> Live Demo</a
+              >
+              -->
+              <a
+                href="https://github.com/irfansyafie96/ai-powered-tutoring-system"
+                class="project-link"
+                target="_blank"
+                ><i class="fab fa-github"></i> GitHub Repo</a
+              >
+            </div>
+          </div>
+
+          <!-- Add more project items as needed -->
+        </div>
+      </section>
+
+      <section id="skills" class="section">
+        <h2><i class="fas fa-code"></i> Skills</h2>
+        <div class="skills-container">
+          <div class="skill-category">
+            <h3>Technical Skills</h3>
+            <div class="skills-grid">
+              <div class="skill-item">
+                <div class="skill-name">C++</div>
+                <div class="skill-bar">
+                  <div class="skill-level" style="width: 85%"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-name">Java</div>
+                <div class="skill-bar">
+                  <div class="skill-level" style="width: 75%"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-name">SQL</div>
+                <div class="skill-bar">
+                  <div class="skill-level" style="width: 70%"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-name">JavaScript</div>
+                <div class="skill-bar">
+                  <div class="skill-level" style="width: 65%"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-name">HTML/CSS</div>
+                <div class="skill-bar">
+                  <div class="skill-level" style="width: 80%"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-name">Git</div>
+                <div class="skill-bar">
+                  <div class="skill-level" style="width: 70%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="skill-category">
+            <h3>Soft Skills</h3>
+            <div class="soft-skills">
+              <span class="soft-skill-tag">Team Collaboration</span>
+              <span class="soft-skill-tag">Problem Solving</span>
+              <span class="soft-skill-tag">Time Management</span>
+              <span class="soft-skill-tag">Adaptability</span>
+              <span class="soft-skill-tag">Communication</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Project Modal -->
+    <div id="projectModal" class="modal">
+      <div class="modal-content" id="modalContent">
+        <!-- Content will be inserted by JavaScript -->
+      </div>
+    </div>
+
+    <footer>
+      <p id="copyright">
+        &copy; 2025 Irfan Syafie Nor Afian. All rights reserved.
+      </p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
