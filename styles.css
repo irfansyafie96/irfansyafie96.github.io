@@ -230,6 +230,9 @@ header::before {
 
 .header-content {
   position: relative;
+}
+
+.header-content {
   max-width: 800px;
   margin: 0 auto;
 }
@@ -537,7 +540,7 @@ h1 {
   margin-bottom: 0.5rem;
 }
 
-/* Skills */
+/* Skills Section */
 .skills-container {
   display: flex;
   flex-direction: column;
@@ -554,22 +557,9 @@ h1 {
 .skills-scroller {
   display: flex;
   gap: 1rem;
-  overflow-x: auto;
-  padding-bottom: 0.5rem;
-  scrollbar-width: thin;
-  scrollbar-color: var(--primary-color) var(--surface-color);
   justify-content: center;
   flex-wrap: wrap;
   max-width: 100%;
-}
-
-.skills-scroller::-webkit-scrollbar {
-  height: 8px;
-}
-
-.skills-scroller::-webkit-scrollbar-thumb {
-  background-color: var(--primary-color);
-  border-radius: 10px;
 }
 
 .skill-tag {
@@ -583,10 +573,9 @@ h1 {
   background-color: var(--surface-color);
   color: var(--text-color);
   border: 1.5px solid rgba(0, 0, 0, 0.08);
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+  box-shadow: var(--shadow);
   transition: var(--transition);
   white-space: nowrap;
-  cursor: default;
 }
 
 .skill-tag i {
@@ -598,22 +587,23 @@ h1 {
 .skill-tag--technical:hover {
   background-color: var(--primary-color);
   color: #fff;
-  border-color: var(--primary-color);
+  transform: translateY(-3px);
 }
+
 .skill-tag--technical:hover i {
   color: #fff;
 }
 
 .skill-tag--soft {
-  border-style: dashed;
-  border-color: var(--accent-color);
   background-color: var(--accent-color);
   color: var(--dark-color);
+  border: none;
 }
+
 .skill-tag--soft:hover {
   background-color: var(--primary-color);
   color: #fff;
-  border-color: var(--primary-color);
+  transform: translateY(-3px);
 }
 
 @media (max-width: 600px) {
@@ -626,7 +616,7 @@ h1 {
   }
 }
 
-/* Remove old progress bar styles since we're using the new tag system */
+/* Remove old progress bar styles */
 .skills-grid,
 .skill-item,
 .skill-name,
@@ -975,6 +965,17 @@ footer p {
     font-size: 1.1rem;
   }
 }
+
+/* Style for project preview image if you add one */
+/*
+#projects .project-preview {
+  max-width: 100%;
+  height: auto;
+  margin-top: 1rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+*/
 
 /* Add responsiveness for smaller screens if needed, similar to your other sections */
 @media (max-width: 768px) {
