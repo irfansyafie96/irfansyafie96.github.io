@@ -301,17 +301,17 @@ header::before {
 h1 {
   font-size: 2.5rem;
   margin-bottom: 0.5rem;
-  color: var(--light-color);
+  color: white;
 }
 
 .dark-mode h1 {
-  color: var(--dark-color); /* Light color in dark mode */
+  color: white; /* Keep white in both modes */
 }
 
 .subtitle {
   font-size: 1.2rem;
-  color: var(--dark-color); /* This is ok, as it has a light background */
-  background-color: rgba(255, 255, 255, 0.8);
+  color: #0a1625; /* Hardcoded dark color */
+  background-color: rgba(255, 255, 255, 0.85);
   padding: 0.4rem 0.8rem;
   border-radius: 4px;
   margin-bottom: 1rem;
@@ -320,9 +320,10 @@ h1 {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.dark-mode .subtitle,
-.dark-mode .contact-info p {
-  background-color: rgba(255, 255, 255, 0.05);
+/* Dark mode - keep dark text on light bg */
+.dark-mode .subtitle {
+  background-color: rgba(255, 255, 255, 0.85);
+  color: #0a1625;
 }
 
 .section h2 {
@@ -380,11 +381,21 @@ h1 {
 .contact-info p {
   display: inline-block;
   margin: 0 0.5rem;
-  color: var(--dark-color);
+  color: #0a1625; /* Hardcoded dark color */
   font-weight: 500;
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(255, 255, 255, 0.85);
   padding: 0.3rem 0.6rem;
   border-radius: 4px;
+}
+
+/* Ensure contact info looks identical in both modes */
+.dark-mode .contact-info p {
+  background-color: rgba(255, 255, 255, 0.85);
+  color: #0a1625;
+}
+
+.dark-mode .contact-info p i {
+  color: #2c5282; /* Primary color hardcoded */
 }
 
 .contact-info i {
@@ -964,17 +975,18 @@ footer p {
 }
 
 .dark-mode footer {
-  background-color: #1a2238;
-  color: var(--text-light);
-  border-top: 1px solid rgba(197, 160, 89, 0.3);
-  background-image: linear-gradient(#1a2238, #1a2238),
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: white;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  background-image: linear-gradient(135deg, var(--primary-color), var(--secondary-color)),
     repeating-linear-gradient(
       45deg,
-      rgba(197, 160, 89, 0.05) 0px,
-      rgba(197, 160, 89, 0.05) 1px,
+      rgba(255, 255, 255, 0.05) 0px,
+      rgba(255, 255, 255, 0.05) 1px,
       transparent 1px,
       transparent 5px
     );
+  background-blend-mode: overlay;
 }
 
 /* Responsive Design */
