@@ -12,12 +12,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Theme toggle functionality
   themeToggle.addEventListener("click", function () {
-    body.classList.toggle("dark-mode");
+    body.classList.toggle("light-mode");
     localStorage.setItem("darkMode", body.classList.contains("dark-mode"));
   });
 
   // Load saved theme preference
-  if (localStorage.getItem("darkMode") === "true") {
+  if (localStorage.getItem("darkMode") !== "false") {
     body.classList.add("dark-mode");
   }
 

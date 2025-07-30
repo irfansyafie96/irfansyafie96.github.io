@@ -1,34 +1,34 @@
 :root {
-  /* Harvey Specter's Corporate Palette */
-  --primary-color: #0a2540; /* Pearson Specter blue */
-  --secondary-color: #1a365d; /* Firm logo navy */
-  --accent-color: #4a6fa5; /* Subtle highlight blue */
-  --dark-color: #13293d; /* Dark suit color */
-  --light-color: #ffffff; /* Crisp dress shirt */
-  --surface-color: #f8f9fa; /* Slightly off-white */
-  --text-color: #2d3748; /* Professional charcoal */
-  --text-light: #718096; /* Secondary gray */
-  --transition: all 0.3s ease;
+  /* Change these to your dark mode colors */
+  --primary-color: #2c5282;
+  --secondary-color: #1a365d;
+  --accent-color: #4a6fa5;
+  --dark-color: #e2e8f0;
+  --light-color: #0a1625;
+  --surface-color: #14213d;
+  --text-color: #f7fafc;
+  --text-light: #a0aec0;
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   --gradient: linear-gradient(
     135deg,
     var(--primary-color),
     var(--secondary-color)
   );
-  --shadow: 0 4px 6px rgba(10, 37, 64, 0.15); /* Blue-tinted shadow */
-  --radius: 6px; /* Sharper corners */
+  --transition: all 0.3s ease;
+  --radius: 6px;
 }
 
-.dark-mode {
-  /* Nighttime Corporate Office */
-  --light-color: #0a1625; /* After-hours navy */
-  --dark-color: #e2e8f0; /* Soft white text */
-  --surface-color: #14213d; /* Document folder blue */
-  --text-color: #f7fafc;
-  --text-light: #a0aec0; /* Subtle gray */
-  --shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  --primary-color: #2c5282; /* Boardroom blue */
+.light-mode {
+  /* Change these to your original light mode colors */
+  --primary-color: #0a2540;
   --secondary-color: #1a365d;
-  --accent-color: #4a6fa5; /* Maintains blue accent */
+  --accent-color: #4a6fa5;
+  --dark-color: #13293d;
+  --light-color: #ffffff;
+  --surface-color: #f8f9fa;
+  --text-color: #2d3748;
+  --text-light: #718096;
+  --shadow: 0 4px 6px rgba(10, 37, 64, 0.15);
 }
 
 *,
@@ -363,12 +363,12 @@ h1 {
   font-size: 1.1rem;
   letter-spacing: 0.3px;
   font-weight: 400;
-  text-shadow: 0 1px 2px rgba(0,0,0,0.3); /* Improves readability */
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3); /* Improves readability */
 }
 
 .dark-mode .about-me p {
   color: var(--dark-color); /* White in dark mode */
-  text-shadow: 0 1px 2px rgba(0,0,0,0.5); /* Stronger shadow for dark bg */
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5); /* Stronger shadow for dark bg */
 }
 
 @media (max-width: 768px) {
