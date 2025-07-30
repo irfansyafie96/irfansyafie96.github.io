@@ -1,29 +1,34 @@
 :root {
-  --primary-color: #5a8f7b; /* Sage green */
-  --secondary-color: #3a5a40; /* Forest green */
-  --accent-color: #d4a373; /* Warm tan */
-  --dark-color: #2b2d42; /* Dark slate */
-  --light-color: #f8f4e3; /* Cream */
-  --surface-color: white;
-  --text-color: #333333; /* Dark gray */
-  --text-light: #6b7280;
+  /* Harvey Specter's Corporate Palette */
+  --primary-color: #0a2540; /* Pearson Specter blue */
+  --secondary-color: #1a365d; /* Firm logo navy */
+  --accent-color: #4a6fa5; /* Subtle highlight blue */
+  --dark-color: #13293d; /* Dark suit color */
+  --light-color: #ffffff; /* Crisp dress shirt */
+  --surface-color: #f8f9fa; /* Slightly off-white */
+  --text-color: #2d3748; /* Professional charcoal */
+  --text-light: #718096; /* Secondary gray */
   --transition: all 0.3s ease;
   --gradient: linear-gradient(
     135deg,
     var(--primary-color),
     var(--secondary-color)
   );
-  --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  --radius: 8px;
+  --shadow: 0 4px 6px rgba(10, 37, 64, 0.15); /* Blue-tinted shadow */
+  --radius: 6px; /* Sharper corners */
 }
 
 .dark-mode {
-  --light-color: #1a202c; /* Darker background */
-  --dark-color: #edf2f7; /* Lighter text/elements */
-  --surface-color: #2d3748; /* Card/Navbar background */
-  --text-color: #e2e8f0; /* Main text */
-  --text-light: #a0aec0; /* Secondary text */
-  --shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  /* Nighttime Corporate Office */
+  --light-color: #0a1625; /* After-hours navy */
+  --dark-color: #e2e8f0; /* Soft white text */
+  --surface-color: #14213d; /* Document folder blue */
+  --text-color: #f7fafc;
+  --text-light: #a0aec0; /* Subtle gray */
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  --primary-color: #2c5282; /* Boardroom blue */
+  --secondary-color: #1a365d;
+  --accent-color: #4a6fa5; /* Maintains blue accent */
 }
 
 *,
@@ -70,7 +75,7 @@ html {
 }
 
 body {
-  font-family: "Poppins", "Ubuntu", sans-serif;
+  font-family: "Playfair Display", "Georgia", serif;
   color: var(--text-color);
   line-height: 1.6;
   background-color: var(--light-color);
@@ -171,8 +176,11 @@ body {
   font-size: 1.1rem;
   transition: var(--transition);
   position: relative;
-  padding: 0.8rem 1rem;
+  padding: 0.8rem 1.5rem;
   display: inline-block;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  font-family: "Lato", sans-serif;
 }
 
 .nav-links a::after {
@@ -207,11 +215,28 @@ body {
 header {
   padding: 8rem 2rem 2rem;
   text-align: center;
-  background: var(--gradient);
+  background: linear-gradient(
+    135deg,
+    var(--primary-color),
+    var(--secondary-color)
+  );
   color: white;
   position: relative;
   z-index: 1;
   overflow: hidden;
+  background-image: linear-gradient(
+      135deg,
+      var(--primary-color),
+      var(--secondary-color)
+    ),
+    repeating-linear-gradient(
+      45deg,
+      rgba(255, 255, 255, 0.05) 0px,
+      rgba(255, 255, 255, 0.05) 1px,
+      transparent 1px,
+      transparent 5px
+    );
+  background-blend-mode: overlay;
 }
 
 header::before {
@@ -279,6 +304,10 @@ h1 {
   color: var(--light-color);
 }
 
+.dark-mode h1 {
+  color: var(--dark-color); /* Light color in dark mode */
+}
+
 .subtitle {
   font-size: 1.2rem;
   color: var(--dark-color); /* This is ok, as it has a light background */
@@ -320,6 +349,34 @@ h1 {
   margin-bottom: 1.5rem;
 }
 
+.about-me {
+  max-width: 700px;
+  margin: 2rem auto;
+  text-align: center;
+  line-height: 1.6;
+  font-family: "Poppins", sans-serif; /* Consistent with other text */
+}
+
+.about-me p {
+  margin-bottom: 1.5rem;
+  color: white; /* White text for light mode header */
+  font-size: 1.1rem;
+  letter-spacing: 0.3px;
+  font-weight: 400;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.3); /* Improves readability */
+}
+
+.dark-mode .about-me p {
+  color: var(--dark-color); /* White in dark mode */
+  text-shadow: 0 1px 2px rgba(0,0,0,0.5); /* Stronger shadow for dark bg */
+}
+
+@media (max-width: 768px) {
+  .about-me {
+    padding: 0 1rem;
+  }
+}
+
 .contact-info p {
   display: inline-block;
   margin: 0 0.5rem;
@@ -333,6 +390,10 @@ h1 {
 .contact-info i {
   margin-right: 0.5rem;
   color: var(--primary-color);
+}
+
+.dark-mode .contact-info i {
+  color: var(--dark-color);
 }
 
 .social-links {
@@ -352,6 +413,10 @@ h1 {
   font-size: 1.2rem;
   transition: var(--transition);
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.dark-mode .social-icon {
+  color: var(--dark-color);
 }
 
 .social-icon:hover {
@@ -462,9 +527,13 @@ h1 {
 }
 
 .degree {
-  font-weight: 500;
-  color: var(--primary-color);
+  font-weight: 600;
+  color: var(--text-color); /* Matches main text */
   margin-bottom: 0.5rem;
+}
+
+.dark-mode .degree {
+  color: var(--dark-color); /* Light text in dark mode */
 }
 
 .duration {
@@ -501,10 +570,11 @@ h1 {
   background-color: var(--surface-color);
   border-radius: var(--radius);
   padding: 1.5rem;
-  box-shadow: var(--shadow);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   transition: var(--transition);
   position: relative;
   overflow: hidden;
+  border: 1px solid rgba(197, 160, 89, 0.2);
 }
 
 .experience-card::before {
@@ -534,9 +604,13 @@ h1 {
 }
 
 .position {
-  font-weight: 500;
-  color: var(--primary-color);
+  font-weight: 600;
+  color: var(--text-color); /* Matches main text */
   margin-bottom: 0.5rem;
+}
+
+.dark-mode .position {
+  color: var(--dark-color); /* Light text in dark mode */
 }
 
 .responsibilities {
@@ -580,16 +654,18 @@ h1 {
   font-weight: 600;
   background-color: var(--surface-color);
   color: var(--text-color);
-  border: 1.5px solid rgba(0, 0, 0, 0.08);
-  box-shadow: var(--shadow);
+  border: 1px solid rgba(197, 160, 89, 0.3);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   transition: var(--transition);
   white-space: nowrap;
+  font-family: "Lato", sans-serif;
 }
 
 .skill-tag i {
   font-size: 1.3rem;
-  color: var(--primary-color);
+  color: var(--accent-color);
   transition: var(--transition);
+  filter: brightness(1.1);
 }
 
 .skill-tag--technical:hover {
@@ -685,18 +761,29 @@ h1 {
 #projects .project-link {
   display: inline-block;
   margin-right: 1rem;
-  color: var(--primary-color); /* Reuse your primary color */
+  color: var(--text-color); /* Matches main text */
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 600;
   transition: var(--transition);
+  border: 1px solid var(--primary-color);
+  padding: 0.3rem 0.8rem;
+  border-radius: 4px;
+}
+
+.dark-mode #projects .project-link {
+  color: var(--dark-color); /* Light text in dark mode */
+  border-color: var(--dark-color);
 }
 
 .project-link.view-details-btn {
   background: none;
-  border: none;
+  border: 1px solid var(--accent-color);
   font-family: inherit;
   font-size: inherit;
   cursor: pointer;
+  padding: 0.3rem 0.8rem;
+  border-radius: 4px;
+  color: var(--accent-color);
 }
 
 #projects .project-link:hover {
@@ -760,7 +847,7 @@ h1 {
 }
 
 .dark-mode .modal-header {
-  border-bottom-color: rgba(255, 255, 255, 0.1);
+  border-bottom-color: rgba(212, 175, 55, 0.2);
 }
 
 .modal-header h3 {
@@ -840,8 +927,8 @@ h1 {
 }
 
 .dark-mode .modal-link.secondary {
-  border-color: var(--text-light);
-  color: var(--text-color);
+  border-color: var(--accent-color);
+  color: var(--accent-color);
 }
 
 .modal-link.secondary:hover {
@@ -860,6 +947,16 @@ footer {
   padding: 2rem 0;
   background-color: var(--dark-color);
   color: var(--light-color);
+  border-top: 1px solid rgba(197, 160, 89, 0.3);
+  background-image: linear-gradient(var(--dark-color), var(--dark-color)),
+    repeating-linear-gradient(
+      45deg,
+      rgba(197, 160, 89, 0.05) 0px,
+      rgba(197, 160, 89, 0.05) 1px,
+      transparent 1px,
+      transparent 5px
+    );
+  background-blend-mode: overlay;
 }
 
 footer p {
@@ -867,8 +964,17 @@ footer p {
 }
 
 .dark-mode footer {
-  background-color: #111827; /* A very dark color for the footer */
+  background-color: #1a2238;
   color: var(--text-light);
+  border-top: 1px solid rgba(197, 160, 89, 0.3);
+  background-image: linear-gradient(#1a2238, #1a2238),
+    repeating-linear-gradient(
+      45deg,
+      rgba(197, 160, 89, 0.05) 0px,
+      rgba(197, 160, 89, 0.05) 1px,
+      transparent 1px,
+      transparent 5px
+    );
 }
 
 /* Responsive Design */
@@ -902,7 +1008,7 @@ footer p {
   }
 
   .dark-mode .nav-links li {
-    border-bottom-color: rgba(255, 255, 255, 0.1);
+    border-bottom-color: rgba(212, 175, 55, 0.2);
   }
 
   .nav-links a {
