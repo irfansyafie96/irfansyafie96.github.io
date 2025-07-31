@@ -569,15 +569,33 @@ h1 {
   gap: 0.5rem;
 }
 
-/* Experience */
-.experience-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 1.5rem;
-  margin-top: 1.5rem;
+/* Experience Section - Horizontal Scrollable */
+#experience {
+  position: relative;
 }
 
-.experience-card {
+#experience .experience-container {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  gap: 1.5rem;
+  padding: 0.5rem 0;
+  margin: 1.5rem 0;
+  justify-content: center; /* Center cards by default */
+}
+
+#experience .experience-container::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+#experience .experience-container.scrollable {
+  justify-content: flex-start; /* Left-align when scrollable */
+}
+
+#experience .experience-card {
   background-color: var(--surface-color);
   border-radius: var(--radius);
   padding: 1.5rem;
@@ -586,9 +604,12 @@ h1 {
   position: relative;
   overflow: hidden;
   border: 1px solid rgba(197, 160, 89, 0.2);
+  flex: 0 0 auto;
+  width: 300px;
+  scroll-snap-align: start;
 }
 
-.experience-card::before {
+#experience .experience-card::before {
   content: "";
   position: absolute;
   top: 0;
@@ -599,37 +620,37 @@ h1 {
   transition: var(--transition);
 }
 
-.experience-card:hover {
+#experience .experience-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
-.experience-card:hover::before {
+#experience .experience-card:hover::before {
   height: 100%;
 }
 
-.experience-card h3 {
+#experience .experience-card h3 {
   font-size: 1.2rem;
   margin-bottom: 0.5rem;
   color: var(--text-color);
 }
 
-.position {
+#experience .position {
   font-weight: 600;
   color: var(--text-color); /* Matches main text */
   margin-bottom: 0.5rem;
 }
 
-.dark-mode .position {
+.dark-mode #experience .position {
   color: var(--dark-color); /* Light text in dark mode */
 }
 
-.responsibilities {
+#experience .responsibilities {
   list-style-position: inside;
   margin-top: 1rem;
 }
 
-.responsibilities li {
+#experience .responsibilities li {
   margin-bottom: 0.5rem;
 }
 
@@ -722,57 +743,124 @@ h1 {
   display: none !important;
 }
 
-/* Projects Section */
+/* Projects Section - Horizontal Scrollable */
+#projects {
+  position: relative;
+}
+
+/* View All Projects Button */
+.view-all-container {
+  text-align: center;
+  margin: 1.5rem 0;
+}
+
+.view-all-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: var(--primary-color);
+  color: white;
+  text-decoration: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: var(--radius);
+  font-weight: 600;
+  transition: var(--transition);
+  font-size: 1rem;
+}
+
+.view-all-btn:hover {
+  background-color: var(--secondary-color);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.view-all-btn i {
+  font-size: 1.2rem;
+}
+
 #projects .projects-container {
-  display: grid;
-  grid-template-columns: 1fr;
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
   gap: 1.5rem;
-  width: 100%;
-  margin-top: 1.5rem;
+  padding: 0.5rem 0;
+  margin: 1.5rem 0;
+  justify-content: center; /* Center cards by default */
+}
+
+#projects .projects-container::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+#projects .projects-container.scrollable {
+  justify-content: flex-start; /* Left-align when scrollable */
 }
 
 #projects .project-item {
   background-color: var(--surface-color);
-  border-radius: var(--radius); /* Reuse your defined radius */
+  border-radius: var(--radius);
   padding: 1.5rem;
-  box-shadow: var(--shadow); /* Reuse your defined shadow */
-  transition: var(--transition); /* Reuse your defined transition */
-  max-width: 800px;
-  width: 100%;
-  margin: 0 auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(197, 160, 89, 0.2);
+  flex: 0 0 auto;
+  width: 300px;
+  scroll-snap-align: start;
+}
+
+#projects .project-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3px;
+  height: 0;
+  background: var(--gradient);
+  transition: var(--transition);
 }
 
 #projects .project-item:hover {
-  transform: translateY(-5px); /* Subtle hover effect */
+  transform: translateY(-5px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+#projects .project-item:hover::before {
+  height: 100%;
 }
 
 #projects .project-item h3 {
   font-size: 1.2rem;
   margin-bottom: 0.5rem;
-  color: var(--text-color); /* Use consistent text color variable */
+  color: var(--text-color);
 }
 
 #projects .project-description {
   margin-bottom: 0.8rem;
-  color: var(--text-color); /* Reuse your text color */
+  color: var(--text-color);
 }
 
 #projects .project-technologies {
   font-size: 0.9rem;
-  color: var(--text-light); /* Reuse your light text color */
+  color: var(--text-light);
   margin-bottom: 1rem;
   font-style: italic;
 }
 
 #projects .project-links {
   margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
 #projects .project-link {
   display: inline-block;
-  margin-right: 1rem;
-  color: var(--text-color); /* Matches main text */
+  color: var(--text-color);
   text-decoration: none;
   font-weight: 600;
   transition: var(--transition);
@@ -782,7 +870,7 @@ h1 {
 }
 
 .dark-mode #projects .project-link {
-  color: var(--dark-color); /* Light text in dark mode */
+  color: var(--dark-color);
   border-color: var(--dark-color);
 }
 
@@ -798,11 +886,54 @@ h1 {
 }
 
 #projects .project-link:hover {
-  color: var(--secondary-color); /* Hover color */
+  color: var(--secondary-color);
 }
 
 #projects .project-link i {
   margin-right: 0.5rem;
+}
+
+/* Section Navigation Arrows */
+.section-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: var(--surface-color);
+  color: var(--primary-color);
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+}
+
+.section-arrow:hover {
+  background-color: var(--primary-color);
+  color: var(--light-color);
+}
+
+.section-arrow.left {
+  left: 10px;
+}
+
+.section-arrow.right {
+  right: 10px;
+}
+
+/* Hide arrows by default - only show when explicitly needed */
+.section-arrow {
+  display: none;
+}
+
+/* Show arrows only when container has scrollable class */
+.scrollable-container ~ .section-arrow {
+  display: flex;
 }
 
 /* Modal */
@@ -975,10 +1106,18 @@ footer p {
 }
 
 .dark-mode footer {
-  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  background: linear-gradient(
+    135deg,
+    var(--primary-color),
+    var(--secondary-color)
+  );
   color: white;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
-  background-image: linear-gradient(135deg, var(--primary-color), var(--secondary-color)),
+  background-image: linear-gradient(
+      135deg,
+      var(--primary-color),
+      var(--secondary-color)
+    ),
     repeating-linear-gradient(
       45deg,
       rgba(255, 255, 255, 0.05) 0px,
@@ -1102,10 +1241,3 @@ footer p {
   box-shadow: var(--shadow);
 }
 */
-
-/* Add responsiveness for smaller screens if needed, similar to your other sections */
-@media (max-width: 768px) {
-  #projects .projects-container {
-    grid-template-columns: 1fr; /* Stack projects on smaller screens */
-  }
-}

@@ -1,0 +1,80 @@
+{
+  "projects": [
+    {
+      "id": "ai-tutor",
+      "title": "AI-Powered Tutoring System",
+      "brief": "Full-stack quiz generator with AI-powered features for personalized learning experiences.",
+      "overview": "A student-centered, AI-powered tutoring system to help learners study more efficiently by organizing notes, generating summaries, and creating interactive quizzes.",
+      "date": "June 2025",
+      "technologies": [
+        "React",
+        "Node.js",
+        "Express",
+        "PostgreSQL",
+        "JWT",
+        "DeepSeek API",
+        "Multer",
+        "React Router",
+        "Axios",
+        "React-Markdown",
+        "React-PDF"
+      ],
+      "features": [
+        "Secure User Authentication with JWT",
+        "Note Upload Support for PDF, TXT, and PPTX files",
+        "AI Summarization using DeepSeek API",
+        "Interactive Quiz Generation from uploaded notes",
+        "Personal Library for organizing notes",
+        "Search & Recommendation Engine"
+      ],
+      "technical": "The system is built with a MERN stack (React, Node.js, Express, MongoDB) with PostgreSQL as the database. The frontend uses React functional components with hooks, React Router for navigation, and Axios for API communication. The backend implements a RESTful API with Express.js, JWT for authentication, Multer for file uploads, and integrates with the DeepSeek API for AI processing. The application also includes features for PDF viewing, text extraction, and file conversion.",
+      "challenges": "One of the main challenges was implementing secure file uploads and processing while maintaining good performance. I also faced challenges in integrating the DeepSeek API for natural language processing and ensuring the generated quizzes were relevant and appropriately challenging. Additionally, creating a responsive UI that worked well across different devices while maintaining a consistent user experience required careful planning and testing.",
+      "images": {
+        "thumbnail": "ai-powered-tutoring-system-thumbnail.png",
+        "main": "ai-powered-tutoring-system-thumbnail.png",
+        "gallery": [
+          "ai-powered-tutoring-system-thumbnail.png",
+          "ai-powered-tutoring-system-1.png",
+          "ai-powered-tutoring-system-2.png",
+          "ai-powered-tutoring-system-3.png"
+        ]
+      },
+      "links": {
+        "liveDemo": "#",
+        "github": "https://github.com/irfansyafie96/ai-powered-tutoring-system"
+      },
+      "relatedProjects": ["food-ordering"]
+    },
+    {
+      "id": "food-ordering",
+      "title": "Food Ordering System",
+      "brief": "A collaborative, full-stack food ordering web application designed to streamline the process of online food orders and real-time staff management.",
+      "overview": "The Food Ordering System is a practical project developed with two teammates to simulate a digital ordering workflow in a restaurant environment. It supports customer orders, staff management, order tracking, and email notifications — all powered by a PHP backend and MySQL database. This project was created as part of our coursework at Universiti Teknikal Malaysia Melaka (UTeM), Faculty of Information and Communication Technology (FTMK), reflecting our collaborative effort and applied understanding of full-stack web development.",
+      "date": "June 2025",
+      "technologies": ["PHP", "MySQL", "HTML/CSS", "JavaScript", "PHPMailer"],
+      "features": [
+        "Customer Order System with intuitive UI",
+        "Staff Dashboard for order management",
+        "Real-Time Order Status tracking",
+        "Email Notifications for order confirmations",
+        "Responsive UI for desktop and mobile"
+      ],
+      "technical": "The application is built using XAMPP (which includes Apache, MySQL, and PHP) on Windows with vanilla frontend technologies. The backend uses core PHP scripts with a modular architecture for clean separation of concerns. PHPMailer is integrated for email notifications, and the database is managed with MySQL using mysqli for database connections. The frontend uses semantic HTML5, CSS3 for styling, and vanilla JavaScript for interactivity and form validation.",
+      "challenges": "Working in a collaborative team environment required effective communication and task coordination. One of the main technical challenges was implementing a table locking mechanism to prevent double bookings when a customer scans a table, which required careful database transaction management. Another significant challenge was implementing real-time order status updates for staff. Additionally, integrating PHPMailer for email notifications and ensuring consistent email delivery across different email providers required careful configuration and testing, especially for order confirmations and status updates.",
+      "images": {
+        "thumbnail": "food-ordering-system-thumbnail.png",
+        "main": "food-ordering-system-thumbnail.png",
+        "gallery": [
+          "food-ordering-system-thumbnail.png",
+          "food-ordering-system-1.png",
+          "food-ordering-system-2.png"
+        ]
+      },
+      "links": {
+        "liveDemo": "#",
+        "github": "https://github.com/irfansyafie96/food_ordering_system"
+      },
+      "relatedProjects": ["ai-tutor"]
+    }
+  ]
+}

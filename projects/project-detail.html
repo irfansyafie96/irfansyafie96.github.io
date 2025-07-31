@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>Project Details - Irfan Syafie</title>
+    <meta
+      name="description"
+      content="Detailed view of Irfan Syafie's development project."
+    />
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="project-detail-styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Ubuntu:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <nav id="navbar">
+      <div class="nav-container">
+        <ul class="nav-links">
+          <li><a href="../index.html#about">About</a></li>
+          <li><a href="../index.html#education">Education</a></li>
+          <li><a href="../index.html#experience">Experience</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="../index.html#skills">Skills</a></li>
+        </ul>
+        <button class="menu-toggle">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </nav>
+
+    <main class="project-detail-main">
+      <section class="project-header">
+        <div class="container">
+          <div class="project-breadcrumb">
+            <a href="../index.html">Home</a> /
+            <a href="projects.html">Projects</a> /
+            <span id="project-title-breadcrumb">Project Name</span>
+          </div>
+          <h1 id="project-title">Project Name</h1>
+          <div class="project-meta">
+            <span class="project-date"
+              ><i class="far fa-calendar"></i>
+              <span id="project-date">Month Year</span></span
+            >
+            <span class="project-tech"
+              ><i class="fas fa-code"></i>
+              <span id="project-tech">Technology Stack</span></span
+            >
+          </div>
+        </div>
+      </section>
+
+      <section class="project-showcase">
+        <div class="container">
+          <div class="project-gallery">
+            <div class="main-image">
+              <img
+                id="project-main-image"
+                src="../images/placeholder.jpg"
+                alt="Project main image"
+              />
+            </div>
+            <div class="thumbnail-gallery" id="thumbnail-gallery">
+              <!-- Thumbnails will be dynamically generated -->
+            </div>
+          </div>
+
+          <div class="project-content">
+            <div class="project-section">
+              <h2>Overview</h2>
+              <p id="project-overview">
+                Project overview will be loaded here...
+              </p>
+            </div>
+
+            <div class="project-section">
+              <h2>Features</h2>
+              <ul id="project-features">
+                <!-- Features will be dynamically generated -->
+              </ul>
+            </div>
+
+            <div class="project-section">
+              <h2>Technical Implementation</h2>
+              <p id="project-technical">
+                Technical details will be loaded here...
+              </p>
+            </div>
+
+            <div class="project-section">
+              <h2>Challenges & Solutions</h2>
+              <p id="project-challenges">
+                Challenges and solutions will be loaded here...
+              </p>
+            </div>
+
+            <div class="project-links">
+              <a
+                id="project-live-demo"
+                href="#"
+                class="project-link primary"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="fas fa-external-link-alt"></i> Live Demo
+              </a>
+              <a
+                id="project-github"
+                href="#"
+                class="project-link secondary"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="fab fa-github"></i> GitHub Repository
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="related-projects">
+        <div class="container">
+          <h2>More Projects</h2>
+          <div class="related-projects-grid" id="related-projects-grid"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p id="copyright">
+        &copy; 2025 Irfan Syafie Nor Afian. All rights reserved.
+      </p>
+    </footer>
+
+    <script src="../script.js"></script>
+    <script src="project-detail-script.js"></script>
+  </body>
+</html>

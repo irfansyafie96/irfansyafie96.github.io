@@ -1,0 +1,338 @@
+/* Project Detail Page Styles */
+.project-detail-main {
+  padding: 6rem 2rem 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Project Header */
+.project-header {
+  margin-bottom: 3rem;
+  padding: 2rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.project-breadcrumb {
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  color: var(--text-light);
+}
+
+.project-breadcrumb a {
+  color: var(--text-light);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.project-breadcrumb a:hover {
+  color: var(--primary-color);
+}
+
+.project-breadcrumb span {
+  color: var(--text-color);
+}
+
+.project-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--text-color);
+}
+
+.project-meta {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.project-meta span {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-light);
+}
+
+.project-meta i {
+  color: var(--primary-color);
+}
+
+/* Project Showcase */
+.project-showcase {
+  margin-bottom: 4rem;
+}
+
+.project-gallery {
+  margin-bottom: 3rem;
+}
+
+.main-image {
+  margin-bottom: 1rem;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.main-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: var(--transition);
+}
+
+.thumbnail-gallery {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  padding-bottom: 0.5rem;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+.thumbnail-gallery::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+.thumbnail-gallery img {
+  width: 150px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: var(--transition);
+  flex-shrink: 0;
+}
+
+.thumbnail-gallery img:hover {
+  transform: scale(1.05);
+  box-shadow: var(--shadow);
+}
+
+.thumbnail-gallery img.active {
+  border: 2px solid var(--primary-color);
+}
+
+.project-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.project-section {
+  background-color: var(--surface-color);
+  padding: 1.5rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.project-section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 0.5rem;
+}
+
+.project-section p {
+  line-height: 1.8;
+  color: var(--text-color);
+}
+
+.project-section ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.project-section li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.8rem;
+  line-height: 1.6;
+  color: var(--text-color);
+}
+
+.project-section li:before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--accent-color);
+  font-weight: bold;
+}
+
+.project-links {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.project-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.8rem 1.5rem;
+  border-radius: var(--radius);
+  font-weight: 600;
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.project-link.primary {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.project-link.primary:hover {
+  background-color: var(--secondary-color);
+  transform: translateY(-3px);
+}
+
+.project-link.secondary {
+  background-color: transparent;
+  color: var(--text-color);
+  border: 2px solid var(--primary-color);
+}
+
+.project-link.secondary:hover {
+  background-color: var(--primary-color);
+  color: white;
+  transform: translateY(-3px);
+}
+
+/* Related Projects */
+.related-projects {
+  margin-top: 4rem;
+}
+
+.related-projects h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: var(--text-color);
+  text-align: center;
+}
+
+.related-projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.related-project-card {
+  background-color: var(--surface-color);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+}
+
+.related-project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.related-project-image {
+  height: 180px;
+  overflow: hidden;
+}
+
+.related-project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--transition);
+}
+
+.related-project-card:hover .related-project-image img {
+  transform: scale(1.05);
+}
+
+.related-project-info {
+  padding: 1.5rem;
+}
+
+.related-project-info h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-color);
+}
+
+.related-project-info p {
+  color: var(--text-light);
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.related-project-link {
+  display: inline-flex;
+  align-items: center;
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+.related-project-link:hover {
+  color: var(--accent-color);
+}
+
+.related-project-link i {
+  margin-left: 0.5rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .project-detail-main {
+    padding: 5rem 1rem 2rem;
+  }
+
+  .project-header h1 {
+    font-size: 2rem;
+  }
+
+  .project-meta {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .thumbnail-gallery img {
+    width: 120px;
+    height: 80px;
+  }
+
+  .project-links {
+    flex-direction: column;
+  }
+
+  .related-projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .project-section {
+    padding: 1rem;
+  }
+
+  .project-section h2 {
+    font-size: 1.3rem;
+  }
+}
+
+/* Error message styles */
+.error-message {
+  text-align: center;
+  padding: 3rem 1rem;
+  background-color: var(--surface-color);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.error-message h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+}
+
+.error-message p {
+  margin-bottom: 2rem;
+  color: var(--text-color);
+}
