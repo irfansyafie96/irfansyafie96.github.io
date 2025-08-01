@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", function () {
       description:
         "A collaborative, full-stack food ordering web application designed to streamline the process of online food orders and real-time staff management. It supports customer orders, staff management, order tracking, and email notifications — all powered by a PHP backend and MySQL database.",
       technologies: "PHP, MySQL, HTML/CSS, JavaScript, PHPMailer",
-      github: "https://github.com/irfansyafie96/food_ordering_system",
+      github: "https://github.com/irfansyafie96/food-ordering-system",
       liveDemo: "#",
     },
   };
