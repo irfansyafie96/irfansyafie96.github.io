@@ -1,5 +1,9 @@
 /* Global styles */
 
+:root {
+  --primary-color: #f5ebe0;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -13,9 +17,22 @@ body {
 
 body {
   line-height: 1.5;
+  background-color: var(--primary-color);
+  font-family: "Ubuntu", sans-serif;
 }
 
 /* Navigation bar styling */
 ul.navBar {
   list-style-type: none;
+}
+
+.navBar li {
+  float: left;
+  padding: 0.8rem 1rem;
+  font-size: 1.5rem;
+}
+
+#navBarName {
+  float: right;
+  font-weight: bold;
 }
