@@ -1,7 +1,8 @@
 /* Global styles */
 
 :root {
-  --primary-color: #f5ebe0;
+  --linen: #f5ebe0;
+  --umber: #6c584c;
 }
 
 * {
@@ -17,7 +18,7 @@ body {
 
 body {
   line-height: 1.5;
-  background-color: var(--primary-color);
+  background-color: var(--linen);
   font-family: "Ubuntu", sans-serif;
 }
 
@@ -35,4 +36,32 @@ ul.navBar {
 #navBarName {
   float: right;
   font-weight: bold;
+}
+
+/* Header styling */
+#homeTitle {
+  clear: both;
+  text-align: center;
+  font-size: 2.5rem;
+  padding: 2rem;
+}
+
+/* About me styling */
+#aboutMeContainer {
+  display: flex;
+  clear: both;
+  align-items: center;
+  justify-content: center;
+}
+
+#profilePicture {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid var(--umber);
+}
+
+#aboutMeText {
+  margin-left: 2rem;
 }
