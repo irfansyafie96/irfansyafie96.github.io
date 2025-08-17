@@ -33,6 +33,12 @@ ul.navBar {
   font-size: 1.5rem;
 }
 
+.navBar li:hover {
+  background-color: var(--umber);
+  color: white;
+  cursor: pointer;
+}
+
 #navBarName {
   float: right;
   font-weight: bold;
