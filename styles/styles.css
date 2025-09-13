@@ -86,8 +86,9 @@ ul.navBar {
 
 #multipleSection {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  max-width: 1000px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  max-width: 850px;
+  margin: 0 auto;
 }
 
 .card {
@@ -108,4 +109,24 @@ ul.navBar {
   font-size: 1.5rem;
   font-weight: 500;
   margin: 1rem 0;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  #multipleSection {
+    grid-template-columns: 1fr;
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  #multipleSection {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1025px) {
+  #multipleSection {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
