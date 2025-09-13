@@ -117,11 +117,29 @@ ul.navBar {
     grid-template-columns: 1fr;
     max-width: 100%;
   }
+
+  .navBar li {
+    font-size: 1rem;
+    padding: 0.2rem 0.5rem;
+  }
+
+  #navBarName {
+    font-size: 1rem;
+  }
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
   #multipleSection {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .navBar li {
+    font-size: 1.5rem;
+    padding: 0.5rem 0.8rem;
+  }
+
+  #navBarName {
+    font-size: 1.5rem;
   }
 }
 
