@@ -1,8 +1,9 @@
 /* Global styles */
-
 :root {
   --linen: #f5ebe0;
   --umber: #6c584c;
+  --champagnePink: #e3d5ca;
+  --timberwolf: #d6ccc2;
 }
 
 * {
@@ -23,12 +24,22 @@ body {
 }
 
 /* Navigation bar styling */
+#navBarContainer {
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  border: 1px solid var(--umber);
+  background-color: var(--linen);
+}
+
 ul.navBar {
   list-style-type: none;
 }
 
 .navBar li {
   float: left;
+  display: block;
   padding: 0.8rem 1rem;
   font-size: 1.5rem;
 }
@@ -46,10 +57,11 @@ ul.navBar {
 
 /* Header styling */
 #homeTitle {
+  margin-top: 2rem;
   clear: both;
   text-align: center;
   font-size: 2.5rem;
-  padding: 2rem;
+  padding-top: 3rem;
 }
 
 /* About me styling */
@@ -70,4 +82,29 @@ ul.navBar {
 
 #aboutMeText {
   margin-left: 2rem;
+}
+
+#multipleSection {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.card {
+  border: 1px solid var(--timberwolf);
+  padding: 1rem;
+  margin: 1rem;
+  border-radius: 4px;
+  background-color: var(--champagnePink);
+  box-shadow: 10px 10px 0 -5px var(--timberwolf);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.sectionTitle {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin: 1rem 0;
 }
