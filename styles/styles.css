@@ -113,11 +113,6 @@ ul.navBar {
 
 /* Responsive design */
 @media (max-width: 768px) {
-  #multipleSection {
-    grid-template-columns: 1fr;
-    max-width: 100%;
-  }
-
   .navBar li {
     font-size: 1rem;
     padding: 0.2rem 0.5rem;
@@ -125,6 +120,16 @@ ul.navBar {
 
   #navBarName {
     font-size: 1rem;
+  }
+
+  #aboutMeContainer {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #multipleSection {
+    grid-template-columns: 1fr;
+    max-width: 100%;
   }
 }
 
