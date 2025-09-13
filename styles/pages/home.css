@@ -1,60 +1,3 @@
-/* Global styles */
-:root {
-  --linen: #f5ebe0;
-  --umber: #6c584c;
-  --champagnePink: #e3d5ca;
-  --timberwolf: #d6ccc2;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html,
-body {
-  height: 100%;
-}
-
-body {
-  line-height: 1.5;
-  background-color: var(--linen);
-  font-family: "Ubuntu", sans-serif;
-}
-
-/* Navigation bar styling */
-#navBarContainer {
-  overflow: hidden;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  border: 1px solid var(--umber);
-  background-color: var(--linen);
-}
-
-ul.navBar {
-  list-style-type: none;
-}
-
-.navBar li {
-  float: left;
-  display: block;
-  padding: 0.8rem 1rem;
-  font-size: 1.5rem;
-}
-
-.navBar li:hover {
-  background-color: var(--umber);
-  color: white;
-  cursor: pointer;
-}
-
-#navBarName {
-  float: right;
-  font-weight: bold;
-}
-
 /* Header styling */
 #homeTitle {
   margin-top: 2rem;
@@ -111,17 +54,7 @@ ul.navBar {
   margin: 1rem 0;
 }
 
-/* Responsive design */
 @media (max-width: 768px) {
-  .navBar li {
-    font-size: 1rem;
-    padding: 0.2rem 0.5rem;
-  }
-
-  #navBarName {
-    font-size: 1rem;
-  }
-
   #aboutMeContainer {
     flex-direction: column;
     text-align: center;
@@ -141,15 +74,6 @@ ul.navBar {
 @media (min-width: 769px) and (max-width: 1024px) {
   #multipleSection {
     grid-template-columns: repeat(2, 1fr);
-  }
-
-  .navBar li {
-    font-size: 1.5rem;
-    padding: 0.5rem 0.8rem;
-  }
-
-  #navBarName {
-    font-size: 1.5rem;
   }
 }
 
