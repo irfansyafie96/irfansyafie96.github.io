@@ -127,6 +127,11 @@ ul.navBar {
     text-align: center;
   }
 
+  #aboutMeText {
+    margin-left: 0;
+    margin-top: 1rem;
+  }
+
   #multipleSection {
     grid-template-columns: 1fr;
     max-width: 100%;
