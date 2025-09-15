@@ -55,6 +55,15 @@ ul.navBar {
   font-weight: bold;
 }
 
+#navBarName a {
+  text-decoration: none;
+  color: black;
+}
+
+#navBarName a:hover {
+  color: white;
+}
+
 /* Responsive design */
 @media (max-width: 768px) {
   .navBar li {
