@@ -1,0 +1,26 @@
+/* Title styling */
+#blogPostTitle {
+  margin-top: 2rem;
+  clear: both;
+  text-align: center;
+  font-size: 2rem;
+  padding-top: 3rem;
+}
+
+/* Date styling */
+#blogDate {
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+/* Blog content size */
+#blogContent {
+  max-width: 550px;
+  margin: 0 auto;
+  padding: 2rem 2rem;
+  text-align: center;
+}
+
+#blogContent p {
+  margin-bottom: 1.5rem;
+}
