@@ -36,16 +36,16 @@
 }
 
 .card {
-  border: 1px solid var(--timberwolf);
+  border: 1px solid;
   padding: 1rem;
   margin: 1rem;
-  border-radius: 4px;
-  background-color: var(--champagnePink);
-  box-shadow: 10px 10px 0 -5px var(--timberwolf);
+  border-radius: 10px;
+  box-shadow: 10px 10px 0 -5px;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .card:hover {
+  background-color: var(--timberwolf);
   transform: translateY(-5px);
 }
 
@@ -57,7 +57,7 @@ a.cardLink {
 .sectionTitle {
   font-size: 1.5rem;
   font-weight: 500;
-  margin: 1rem 0;
+  margin: 0.5rem 0;
 }
 
 @media (max-width: 768px) {

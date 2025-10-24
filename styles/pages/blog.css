@@ -6,3 +6,28 @@
   font-size: 2.5rem;
   padding-top: 3rem;
 }
+
+/* Blog post link */
+.blogPostsFile {
+  display: block;
+  width: 90%;
+  max-width: 550px;
+  text-decoration: none;
+  color: black;
+  margin: 1rem auto;
+  padding: 1rem;
+  border: 1px solid;
+  border-radius: 10px;
+  box-shadow: 10px 10px 0 -5px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.blogPostsFile:hover {
+  background-color: var(--timberwolf);
+  transform: translateY(-5px);
+}
+
+/* Blog posts date */
+.blogPostsDate {
+  font-style: italic;
+}
