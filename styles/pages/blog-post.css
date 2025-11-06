@@ -32,3 +32,46 @@
   margin: 1rem auto;
   border-radius: 8px;
 }
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  #blogPostTitle {
+    font-size: 1.8rem;
+    padding-top: 4rem;
+  }
+
+  #blogDate {
+    font-size: 1.2rem;
+  }
+
+  #blogContent {
+    padding: 1.5rem 1rem;
+    max-width: 95%;
+  }
+
+  #blogContent p {
+    font-size: 1.2rem;
+    margin-bottom: 1.2rem;
+  }
+}
+
+/* Small mobile devices */
+@media (max-width: 480px) {
+  #blogPostTitle {
+    font-size: 1.5rem;
+    padding-top: 3rem;
+  }
+
+  #blogDate {
+    font-size: 1rem;
+  }
+
+  #blogContent {
+    padding: 1rem 0.5rem;
+  }
+
+  #blogContent p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+}

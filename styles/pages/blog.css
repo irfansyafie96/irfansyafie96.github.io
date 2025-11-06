@@ -31,3 +31,40 @@
 .blogPostsDate {
   font-style: italic;
 }
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  #homeTitle {
+    font-size: 2rem;
+    padding-top: 4rem;
+    margin-top: 1rem;
+  }
+
+  .blogPostsFile {
+    width: 95%;
+    max-width: none;
+    padding: 0.8rem;
+    margin: 0.8rem auto;
+  }
+
+  #homeTitle br {
+    display: none; /* Remove line break on mobile */
+  }
+}
+
+/* Small mobile devices */
+@media (max-width: 480px) {
+  #homeTitle {
+    font-size: 1.5rem;
+    padding-top: 3rem;
+  }
+
+  .blogPostsFile {
+    padding: 0.6rem;
+    font-size: 0.9rem;
+  }
+
+  .blogPostsDate {
+    font-size: 0.8rem;
+  }
+}
