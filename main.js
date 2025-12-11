@@ -1,10 +1,3 @@
-// Load navigation bar on every page
-fetch("/components/navbar.html")
-  .then((response) => response.text())
-  .then((data) => {
-    document.getElementById("navBarContainer").innerHTML = data;
-  });
-
 // Load blog posts on blog page
 document.addEventListener("DOMContentLoaded", function () {
   // Check if inside the blog page

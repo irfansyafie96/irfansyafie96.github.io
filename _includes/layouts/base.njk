@@ -1,9 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Education | Irfan Syafie</title>
+    <title>{{ title }} | Irfan Syafie</title>
     <link rel="stylesheet" href="/styles/main.css" />
+    {% if pageStyle %}
+    <link rel="stylesheet" href="{{ pageStyle }}" />
+    {% endif %}
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -13,9 +17,20 @@
   </head>
   <body>
     <!-- Navigation bar -->
-    <div id="navBarContainer"></div>
+    <nav>
+      <ul class="navBar">
+        <li><a href="/pages/about-me/">about me</a></li>
+        <li><a href="/pages/work/">work</a></li>
+        <li><a href="#">projects</a></li>
+        <li><a href="/pages/blog/">blog</a></li>
+        <li id="navBarName"><a href="/">irfan syafie</a></li>
+      </ul>
+    </nav>
 
-    <!-- JavaScript -->
-    <script src="../main.js"></script>
+    <!-- Main Content -->
+    <main>
+      {{ content | safe }}
+    </main>
+
   </body>
 </html>

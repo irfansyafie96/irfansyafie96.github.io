@@ -18,11 +18,12 @@ body {
   background-color: var(--linen);
   font-family: "Ubuntu", sans-serif;
   min-height: 100vh;
+  padding-top: 4rem; /* Adjust this value to match your navbar's height */
   padding-bottom: 1rem;
 }
 
 /* Navigation bar styling */
-#navBarContainer {
+nav {
   overflow: hidden;
   position: fixed;
   top: 0;
@@ -33,11 +34,11 @@ body {
 
 ul.navBar {
   list-style-type: none;
+  display: flex;
+  align-items: center; /* Vertically centers items in the nav bar */
 }
 
 .navBar li {
-  float: left;
-  display: block;
   padding: 0.8rem 1rem;
   font-size: 1.5rem;
 }
@@ -56,12 +57,16 @@ ul.navBar {
 }
 
 #navBarName {
-  float: right;
+  margin-left: auto; /* Pushes this item to the far right */
   font-weight: bold;
 }
 
 /* Responsive design */
 @media (max-width: 768px) {
+  body {
+    padding-top: 2rem; /* Adjusted padding for mobile */
+  }
+
   .navBar li {
     font-size: 1rem;
     padding: 0.2rem 0.5rem;
