@@ -5,15 +5,15 @@ pageStyle: /styles/pages/blog-post.css
 ---
 
 <article>
-  <!-- Blog post header -->
-  <header>
-    <!-- Blog title and date -->
-    <h1 id="blogPostTitle">my first week of internship</h1>
-    <p id="blogDate">10 October 2025</p>
-  </header>
-
   <!-- Blog content -->
   <div id="blogContent">
+    <!-- Blog post header -->
+    <header>
+      <!-- Blog title and date -->
+      <h1 id="blogPostTitle">my first week of internship</h1>
+      <p id="blogDate">{{ blogPosts[0].date | date }}</p>
+    </header>
+
     <p>
       6 October 2025 is my first day of internship. The day before, I felt
       abit nervous cus I never done an internship before. The instruction
@@ -35,6 +35,9 @@ pageStyle: /styles/pages/blog-post.css
       whole lot more adventure with my team! :)
     </p>
 
-    <img src="/assets/first-week-internship.jpg" />
+    <figure class="scrapbook-photo">
+      <img src="/assets/first-week-internship.jpg" alt="Me at the Silverlake office" />
+      <figcaption>me at the Silverlake office</figcaption>
+    </figure>
   </div>
 </article>

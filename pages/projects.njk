@@ -1,0 +1,35 @@
+---
+layout: layouts/base.njk
+title: Projects
+pageStyle: /styles/pages/projects.css
+---
+
+<div class="projects-container">
+  <h1>
+    things i built <br />
+    just to see if i could.
+  </h1>
+  
+  <div class="project-grid">
+    {% for project in projects %}
+    <div class="project-card">
+      <img src="{{ project.image }}" alt="{{ project.title }} screenshot" class="project-image">
+      <h2>{{ project.title }}</h2>
+      <p class="project-short-description">{{ project.short_description }}</p>
+      <p class="project-technologies">
+        {% for tech in project.technologies %}
+        <span class="tech-tag">{{ tech }}</span>{% if not loop.last %},{% endif %}
+        {% endfor %}
+      </p>
+      <div class="project-links">
+        <a href="{{ project.github_link }}" target="_blank" rel="noopener noreferrer" class="button github-button">View Code</a>
+        {% if project.live_demo_link %}
+        <a href="{{ project.live_demo_link }}" target="_blank" rel="noopener noreferrer" class="button demo-button">Live Demo</a>
+        {% endif %}
+      </div>
+    </div>
+    {% else %}
+    <p style="text-align: center;">No projects found yet. Time to build some!</p>
+    {% endfor %}
+  </div>
+</div>

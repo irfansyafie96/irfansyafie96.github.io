@@ -1,0 +1,158 @@
+/* Styles for the Projects page */
+.projects-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Page Title matching your site's aesthetic */
+.projects-container h1 {
+  font-family: "Ubuntu", sans-serif; /* Changed to match blog page h1 */
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: black; /* Changed to black to match blog page h1 */
+  text-align: center;
+}
+
+.projects-container > p {
+  text-align: center;
+  margin-bottom: 3rem;
+  color: var(--umber);
+  font-family: "Ubuntu", sans-serif;
+}
+
+/* Grid Layout */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+/* Card Styling - NOW EXACTLY MATCHING INDEX PAGE */
+.project-card {
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: var(--linen);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 10px 10px 0 -5px black;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  background-color: var(--timberwolf); /* Re-added for consistency */
+  box-shadow: 0px 0px 5px rgba(0,0,0,0.2); /* Softened shadow on hover */
+}
+
+/* Image Styling */
+.project-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 1px solid var(--umber);
+}
+
+/* Typography inside card - NOW MATCHES BLOG CARD H2 */
+.project-card h2 {
+  font-family: "Ubuntu", sans-serif; /* Changed to match blog card h2 */
+  font-size: 1.5rem; /* Common default h2 size */
+  margin: 1rem 0.5rem 0.5rem 0.5rem;
+  color: black;
+  text-align: center;
+}
+
+/* Ensure text remains black on hover (already done, kept for clarity) */
+.project-card:hover h2,
+.project-card:hover .project-short-description,
+.project-card:hover .project-technologies .tech-tag {
+  color: black; 
+}
+
+.project-short-description {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 1rem;
+  color: black;
+  padding: 0 1rem;
+  margin-bottom: 1rem;
+  flex-grow: 1;
+  line-height: 1.6;
+}
+
+/* Tech Tags */
+.project-technologies {
+  padding: 0 1rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.tech-tag {
+  display: inline-block;
+  background-color: var(--timberwolf);
+  color: black;
+  padding: 0.3em 0.8em;
+  margin: 0.2em 0.2em 0.2em 0;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  border: 1px solid transparent;
+}
+
+/* Links / Buttons area */
+.project-links {
+  display: flex;
+  justify-content: flex-start;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: var(--champagnePink);
+  border-top: 1px solid var(--umber);
+}
+
+.button {
+  display: inline-block;
+  padding: 0.5em 1em;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.2s ease;
+  font-family: "Ubuntu", sans-serif;
+  white-space: nowrap;
+}
+
+/* Primary Button (GitHub) */
+.github-button {
+  background-color: var(--umber);
+  color: var(--linen);
+  border: 1px solid var(--umber);
+}
+
+.github-button:hover {
+  background-color: transparent;
+  color: var(--umber);
+}
+
+/* Secondary Button (Demo) */
+.demo-button {
+  background-color: transparent;
+  color: var(--umber);
+  border: 1px solid var(--umber);
+}
+
+.demo-button:hover {
+  background-color: var(--umber);
+  color: var(--linen);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .projects-container h1 {
+    font-size: 2rem;
+  }
+  
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+}

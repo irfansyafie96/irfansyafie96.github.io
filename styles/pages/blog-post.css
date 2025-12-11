@@ -3,14 +3,20 @@
   margin-top: 2rem;
   clear: both;
   text-align: center;
-  font-size: 2rem;
+  font-size: 2.5rem;
   padding-top: 3rem;
+  color: black;
+  font-family: "Ubuntu", sans-serif;
 }
 
 /* Date styling */
 #blogDate {
-  text-align: center;
-  font-size: 1.5rem;
+  text-align: left;
+  font-size: 1.2rem;
+  font-style: italic;
+  color: var(--umber);
+  margin-bottom: 2rem;
+  display: block;
 }
 
 /* Blog content size */
@@ -22,48 +28,76 @@
 
 #blogContent p {
   margin-bottom: 1.5rem;
-  font-size: 1.5rem;
+  font-size: 1.15rem;
+  line-height: 1.6;
+  color: black;
 }
 
-#blogContent img {
-  max-width: 100%;
+/* Scrapbook Photo Styling */
+.scrapbook-photo {
+  max-width: 450px;
+  margin: 3rem auto 2rem auto;
+  background-color: white;
+  padding: 1rem 1rem 2.5rem 1rem;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+  transform: rotate(-2deg);
+  transition: transform 0.3s ease;
+  border: 1px solid #e0e0e0;
+}
+
+.scrapbook-photo:hover {
+  transform: rotate(0deg) scale(1.02);
+}
+
+.scrapbook-photo img {
+  width: 100%;
   height: auto;
   display: block;
-  margin: 1rem auto;
-  border-radius: 8px;
+  border: 1px solid #eee;
+}
+
+.scrapbook-photo figcaption {
+  font-family: "Caveat", "Brush Script MT", cursive;
+  font-size: 1.3rem;
+  text-align: center;
+  color: black; /* Changed caption color to black */
+  margin-top: 1rem;
 }
 
 /* Mobile responsiveness */
 @media (max-width: 768px) {
-  #blogPostTitle {
-    font-size: 1.8rem;
-    padding-top: 4rem;
-  }
-
-  #blogDate {
-    font-size: 1.2rem;
-  }
-
   #blogContent {
     padding: 1.5rem 1rem;
     max-width: 95%;
   }
 
-  #blogContent p {
-    font-size: 1.2rem;
-    margin-bottom: 1.2rem;
+  #blogPostTitle {
+    font-size: 2.2rem;
+    padding-top: 2rem;
+  }
+
+  #blogDate {
+    font-size: 1rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .scrapbook-photo {
+    max-width: 90%;
+    transform: rotate(-1deg);
+    padding: 0.5rem 0.5rem 2rem 0.5rem;
   }
 }
 
 /* Small mobile devices */
 @media (max-width: 480px) {
   #blogPostTitle {
-    font-size: 1.5rem;
-    padding-top: 3rem;
+    font-size: 1.8rem;
+    padding-top: 1rem;
   }
 
   #blogDate {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 
   #blogContent {
@@ -71,7 +105,7 @@
   }
 
   #blogContent p {
-    font-size: 1rem;
+    font-size: 0.95rem;
     margin-bottom: 1rem;
   }
 }

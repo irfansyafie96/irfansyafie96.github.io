@@ -10,7 +10,14 @@ pageStyle: /styles/pages/blog.css
 </h1>
 
 <!-- Blog posts -->
-<div id="blogPostsContainer"></div>
-
-<!-- JavaScript for fetching blog posts -->
-<script src="/main.js"></script>
+<div id="blogPostsContainer">
+  {% for post in blogPosts %}
+  <a href="{{ post.file }}" class="blogPostsFile">
+    <h2>{{ post.title }}</h2>
+    <p class="blogPostsDate">{{ post.date }}</p>
+    <p>{{ post.excerpt }}</p>
+  </a>
+  {% else %}
+  <p style="text-align: center;">No blog posts found.</p>
+  {% endfor %}
+</div>

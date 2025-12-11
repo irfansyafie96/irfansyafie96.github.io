@@ -1,0 +1,24 @@
+[
+  {
+    "title": "AI-Powered Tutoring System",
+    "short_description": "A full-stack web application assisting students with notes organization, AI summarization and interactive quiz generation.",
+    "technologies": [
+      "React.js",
+      "Node.js",
+      "Express.js",
+      "PostgreSQL",
+      "DeepSeek API"
+    ],
+    "github_link": "https://github.com/irfansyafie96/ai-powered-tutoring-system",
+    "live_demo_link": "",
+    "image": "/assets/projects/ai-powered-tutoring-system.png"
+  },
+  {
+    "title": "Food Ordering System",
+    "short_description": "A collaborative, full-stack web application for online food orders and real-time staff management within a restaurant.",
+    "technologies": ["HTML", "CSS3", "JavaScript", "PHP", "MySQL", "PHPMailer"],
+    "github_link": "https://github.com/irfansyafie96/food-ordering-system",
+    "live_demo_link": "",
+    "image": "/assets/projects/food-ordering-system.png"
+  }
+]
