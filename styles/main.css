@@ -24,6 +24,7 @@ body {
 
 /* Navigation bar styling */
 nav {
+  z-index: 1000;
   overflow: hidden;
   position: fixed;
   top: 0;

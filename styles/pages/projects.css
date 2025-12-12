@@ -29,7 +29,7 @@
   margin-top: 2rem;
 }
 
-/* Card Styling - NOW EXACTLY MATCHING INDEX PAGE */
+/* Card Styling */
 .project-card {
   border: 1px solid black;
   border-radius: 10px;
@@ -38,14 +38,15 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.2s ease, background-color 0.2s ease,
+    box-shadow 0.2s ease;
   box-shadow: 10px 10px 0 -5px black;
 }
 
 .project-card:hover {
   transform: translateY(-5px);
   background-color: var(--timberwolf); /* Re-added for consistency */
-  box-shadow: 0px 0px 5px rgba(0,0,0,0.2); /* Softened shadow on hover */
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2); /* Softened shadow on hover */
 }
 
 /* Image Styling */
@@ -69,7 +70,7 @@
 .project-card:hover h2,
 .project-card:hover .project-short-description,
 .project-card:hover .project-technologies .tech-tag {
-  color: black; 
+  color: black;
 }
 
 .project-short-description {
@@ -151,7 +152,7 @@
   .projects-container h1 {
     font-size: 2rem;
   }
-  
+
   .project-grid {
     grid-template-columns: 1fr;
   }
