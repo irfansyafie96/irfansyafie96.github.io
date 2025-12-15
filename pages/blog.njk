@@ -14,7 +14,7 @@ pageStyle: /styles/pages/blog.css
   {% for post in blogPosts %}
   <a href="{{ post.file }}" class="blogPostsFile">
     <h2>{{ post.title }}</h2>
-    <p class="blogPostsDate">{{ post.date }}</p>
+    <p class="blogPostsDate">{{ post.date | date("dd/MM/yyyy") }}</p>
     <p>{{ post.excerpt }}</p>
   </a>
   {% else %}
