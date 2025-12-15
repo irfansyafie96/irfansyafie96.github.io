@@ -33,6 +33,10 @@
   color: black;
 }
 
+.reminderNote {
+  font-weight: 500;
+}
+
 /* Scrapbook Photo Styling */
 .scrapbook-photo {
   max-width: 450px;
