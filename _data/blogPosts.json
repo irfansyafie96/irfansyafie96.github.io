@@ -1,5 +1,11 @@
 [
   {
+    "title": "how to handle a runtime exception in Java",
+    "date": "2025-12-15",
+    "excerpt": "Have you ever wondered how does a developer shows the full message of an error? Here's how to do it.",
+    "file": "/pages/blog-posts/2/"
+  },
+  {
     "title": "my first week of internship",
     "date": "2025-10-10",
     "excerpt": "My first week of internship at Silverlake Innovation Partners has been somewhat incredible and somewhat confusing.",
