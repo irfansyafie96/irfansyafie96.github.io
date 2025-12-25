@@ -113,7 +113,9 @@
 }
 
 .button {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   padding: 0.5em 1em;
   border-radius: 5px;
   text-decoration: none;
@@ -121,6 +123,11 @@
   transition: all 0.2s ease;
   font-family: "Ubuntu", sans-serif;
   white-space: nowrap;
+  gap: 0.5em;
+}
+
+.button svg {
+  flex-shrink: 0;
 }
 
 /* Primary Button (GitHub) */
